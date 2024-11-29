@@ -75,4 +75,4 @@ MIT License - feel free to use this template for your own portfolio!
 
 ## Contact
 
-[Your Name] - [Your Email]
+Leandro O. Gica IV - gica.leandroiv@gmail.com
