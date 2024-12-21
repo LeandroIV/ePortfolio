@@ -189,9 +189,9 @@ body {
   overflow: hidden;
   white-space: nowrap;
   border-right: 1px solid orange; /* Thinner cursor */
-  animation: typewriter 2s steps(4) 1s 1 normal both, cursor 0.75s step-end infinite;
+  animation: typewriter 4s steps(4) 1s 1 normal both, cursor 0.75s step-end infinite;
   position: relative;
-  letter-spacing: 9.8px;
+  letter-spacing: 6.5px;
 }
 
 @keyframes typewriter {
@@ -199,7 +199,7 @@ body {
     width: 0;
   }
   to {
-    width: 45%;
+    width: 62%;
   }
 }
 
@@ -408,6 +408,16 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+
+  body {
+    overflow: auto;
+  }
+
+  .container {
+    overflow: hidden;
+    scroll-snap-type: y mandatory;
+  }
+
   /* Title and Burger Menu - Top Bar */
   .logo {
     font-size: 1.2rem;
@@ -604,6 +614,10 @@ body {
 
 /* Tablet Devices (max-width: 1024px) */
 @media (max-width: 1024px) {
+  body {
+    overflow: auto;
+  }
+
   .hero-content {
     max-width: 70%;
     margin-left: 20px;
@@ -645,6 +659,16 @@ body {
 
 /* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
+
+  body {
+    overflow: auto;
+  }
+
+  .container {
+    overflow: hidden;
+    scroll-snap-type: y mandatory;
+  }
+
   .hero-content {
     max-width: 90%;
     margin-left: 0;
@@ -1322,7 +1346,7 @@ body {
     margin-top: -20px;
     grid-template-columns: 1fr; /* Stack the services vertically on small screens */
     padding: 20px;
-    
+
   }
 
   .service {
@@ -1843,4 +1867,27 @@ body {
 .toast .cta-save:hover {
   background-color: orange;
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow: auto; /* Enable scrolling for smaller devices */
+  }
+
+  .container {
+    overflow-y: scroll; /* Ensure scrolling on mobile */
+    scroll-snap-type: y mandatory; /* Retain snapping */
+  }
+}
+
+/* For tablet devices */
+@media screen and (max-width: 1024px) {
+  html, body {
+    overflow: auto; /* Enable scrolling for smaller devices */
+  }
+
+  .container {
+    overflow-y: scroll; /* Ensure scrolling on mobile */
+    scroll-snap-type: y mandatory; /* Retain snapping */
+  }
 }
