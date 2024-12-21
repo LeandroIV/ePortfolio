@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leandro Gica IV</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="../CSS/EPortfolio.css">
+  <script src="../JavaScript/script.js" defer></script>
+
+</head>
+<body>
+  <div class="container">
+    <!-- Header for Mobile/Tablet -->
+    <header class="header">
+      <div class="burger-menu" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="title">LGIV</div>
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#background">Background</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h1 class="logo" id="holder"></h1>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">&lt;/HOME&gt;</a></li>
+          <li><a href="#about">&lt;/ABOUT&gt;</a></li>
+          <li><a href="#background">&lt;/BACKGROUND&gt;</a></li>
+          <li><a href="#projects">&lt;/PROJECTS&gt;</a></li>
+          <li><a href="#contact">&lt;/CONTACT&gt;</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <a href="mailto:gica.leandroiv@gmail.com" class="icon"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/LeandroIV" class="icon"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/leandroiv.gica.7" class="icon"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="copyright">
+        Copyright ©2024 Leandro<br>
+        Gica IV. All right reserved.
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Home Section -->
+      <section id="home" class="page">
+        <div class="hero-content">
+          <h2>
+            <span class="name-part">MY NAME</span><br>
+            <span class="is">IS</span> <span class="leandro">LEANDRO</span><br>
+            <span class="name">GICA IV...</span>
+          </h2>
+          <p><span class="role">A Computer Science student</span> <span class="school">at USTP</span></p>
+          <a href="#contact" class="cta-button">
+            Got a job for me? <i class="fas fa-arrow-right"></i>
+          </a>
+          
+          <div class="contact-info">
+            <span class="contact-item" onclick="copyToClipboard('+639354574452')">
+              <i class="fas fa-phone"></i> +63 935 457 4452
+            </span>
+            <br>
+            <span class="contact-item" onclick="copyToClipboard('gica.leandroiv@gmail.com')">
+              <i class="fas fa-envelope"></i> gica.leandroiv@gmail.com
+            </span>
+          </div>     
+          
+        </div>
+        <div class="hero-image">
+          <img src="../images/Gica2.png" alt="Leandro Gica IV">
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="page">
+        <div class="about-container">
+          <!-- Left Section: Profile Photo -->
+          <div class="profile-photo">
+            <img src="../images/Gica3.png" alt="Profile Photo">
+          </div>
+      
+          <!-- Right Section: Details -->
+          <div class="about-details">
+            <h2 class="highlight">Hello!</h2>
+            <h1>I'm <span class="highlight">Leandro Gica IV</span></h1>
+            <h3>A Computer Science Student</h3>
+      
+            <p>
+              I am a passionate technology enthusiast and aspiring software engineer. I specialize in developing advanced solutions in robotics, Internet of Things (IoT), and software systems, always focused on delivering innovative and efficient outcomes. Driven by curiosity and a commitment to continuous learning, I thrive on solving complex challenges and exploring the intersection of technology and creativity. Let’s innovate together!
+            </p>
+      
+            <div class="statistics">
+              <div>
+                <h3 class="highlight">6+</h3>
+                <p>Projects<br>Completed</p>
+              </div>
+              <div>
+                <h3 class="highlight">6+</h3>
+                <p>Languages<br>Learned</p>
+              </div>
+              <div>
+                <h3 class="highlight">5+</h3>
+                <p>Research<br>Papers</p>
+              </div>
+            </div>
+      
+            <div class="cv-button">
+              <a href="#" class="cta-button">Download My CV</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="background" class="page">
+        <div class="content">
+            <!-- Left Section: Services -->
+            <div class="section left-section">
+              <h3>Services</h3>
+              <div class="services">
+                  <div class="service">
+                      <a href="#" class="service-link">
+                          <div class="service-bg"></div>
+                          <i class="fas fa-brain"></i>
+                          <h4>Artificial Intelligence</h4>
+                          <p>Enhancing automation with intelligent systems.</p>
+                      </a>
+                  </div>
+                  <div class="service">
+                      <a href="#" class="service-link">
+                          <div class="service-bg"></div>
+                          <i class="fas fa-plug"></i>
+                          <h4>Internet of Things</h4>
+                          <p>Connecting devices for smarter living and operations.</p>
+                      </a>
+                  </div>
+                  <div class="service">
+                      <a href="#" class="service-link">
+                          <div class="service-bg"></div>
+                          <i class="fas fa-cogs"></i>
+                          <h4>Robotics</h4>
+                          <p>Innovating with autonomous machines for real-world solutions.</p>
+                      </a>
+                  </div>
+                  <div class="service">
+                      <a href="#" class="service-link">
+                          <div class="service-bg"></div>
+                          <i class="fas fa-laptop-code"></i>
+                          <h4>Software Systems</h4>
+                          <p>Developing custom software solutions for various applications.</p>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          
+    
+            <!-- Right Section: Background and Skills -->
+            <div class="section right-section">
+              <h3>Background</h3>
+              <p class="with-margin"><strong>BS in Computer Science</strong> (Undergraduate)</p>
+              <p class="with-margin-2"><strong>Investigatory Project:</strong> Robotics Category, National Level</p>
+          
+              <h3>Skills</h3>
+              <div class="skills">
+                  <div class="skill">
+                      <span class="skill-name">HTML</span>
+                      <div class="skill-bar">
+                          <div class="skill-level" data-skill="90"></div>
+                      </div>
+                  </div>
+                  <div class="skill">
+                      <span class="skill-name">CSS</span>
+                      <div class="skill-bar">
+                          <div class="skill-level" data-skill="75"></div>
+                      </div>
+                  </div>
+                  <div class="skill">
+                      <span class="skill-name">JavaScript</span>
+                      <div class="skill-bar">
+                          <div class="skill-level" data-skill="50"></div>
+                      </div>
+                  </div>
+                  <div class="skill">
+                      <span class="skill-name">Java</span>
+                      <div class="skill-bar">
+                          <div class="skill-level" data-skill="60"></div>
+                      </div>
+                  </div>
+                  <div class="skill">
+                      <span class="skill-name">Python</span>
+                      <div class="skill-bar">
+                          <div class="skill-level" data-skill="95"></div>
+                      </div>
+                  </div>
+                  <div class="skill">
+                      <span class="skill-name">C++</span>
+                      <div class="skill-bar">
+                          <div class="skill-level" data-skill="40"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>          
+        </div>
+    </section>
+    
+      <!-- Projects Section -->
+      <section id="projects" class="page">
+        <div class="projects-content">
+          <h2>Projects</h2>
+          <p>Explore my latest projects, where technology meets innovation.</p>
+          <div class="project-slider">
+            <div class="slider">
+              <!-- Previous Button -->
+              <button class="slider--btn slider--btn__prev">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+      
+              <!-- Slider Wrapper -->
+              <div class="slides__wrapper">
+                <div class="slides">
+                  <!-- Slide 1 -->
+                  <div class="slide" data-current>
+                    <img src="../images/SpaceInvaders.png" alt="Project 1" />
+                    <div class="slide-info">
+                      <h3>Space Invaders Mod</h3>
+                      <p>Retro game with a twist.</p>
+                      <a href="https://github.com/LeandroIV/Space-Invaders-mod" class="project-link">View Details</a>
+                    </div>
+                  </div>
+      
+                  <!-- Slide 2 -->
+                  <div class="slide">
+                    <img src="../images/TLC.png" alt="Project 2" />
+                    <div class="slide-info">
+                      <h3>Tender Loving Care </h3>
+                      <p>Patient Profiling Systems</p>
+                      <a href="https://github.com/LeandroIV/TLC_Patients_Profiling_System" class="project-link">View Details</a>
+                    </div>
+                  </div>
+      
+                  <!-- Slide 3 -->
+                  <div class="slide">
+                    <img src="../images/RPG.jpg" alt="Project 3" />
+                    <div class="slide-info">
+                      <h3>Suicide Dungeon Master</h3>
+                      <p>A text game based on MARS MIPS an Assembly Language.</p>
+                      <a href="https://github.com/LeandroIV/Suicide-Dungeon-Master" class="project-link">View Details</a>
+                    </div>
+                  </div>
+      
+                  <!-- Slide 4 -->
+                  <div class="slide">
+                    <img src="../images/Turing.png" alt="Project 4" />
+                    <div class="slide-info">
+                      <h3>Turing Machine Simulator</h3>
+                      <p>A simple app for simulating turing machine by inputting the description.</p>
+                      <a href="https://github.com/LeandroIV/Turing-Machine-Simulator" class="project-link">View Details</a>
+                    </div>
+                  </div>
+      
+                  <!-- Slide 5 -->
+                  <div class="slide">
+                    <img src="../images/RIP.png" alt="Project 5" />
+                    <div class="slide-info">
+                      <h3> Routing Information Protocol (RIP)</h3>
+                      <p>An app that simulates Routing Information Protocol (RIP) networking.</p>
+                      <a href="https://github.com/LeandroIV/RIP_NetworkingCisco" class="project-link">View Details</a>
+                    </div>
+                  </div>
+      
+                  <!-- Slide 6 -->
+                  <div class="slide">
+                    <img src="../images/calc.jpg" alt="Project 6" />
+                    <div class="slide-info">
+                      <h3>PoPL Projects</h3>
+                      <p>Utilizing the 4 programming paradigms in a grade calculator problem.</p>
+                      <a href="#https://github.com/LeandroIV/PoPL-Projects" class="project-link">View Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Next Button -->
+              <button class="slider--btn slider--btn__next">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <polyline points="9 6 15 12 9 18"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+      <!-- Contact Section -->
+      <!-- Contact Form -->
+      <section id="contact" class="page">
+        <div class="contact-content">
+          <h2>Contact</h2>
+          <p>I'd love to hear from you! Whether you have questions, feedback, or just want to connect, reach out to us.</p>
+
+          <!-- Contact Form -->
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/xqakrqlk" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required placeholder="Write your message"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+
+    </main>
+  </div>
+</body>
+</html>
