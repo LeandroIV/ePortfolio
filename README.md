@@ -23,12 +23,22 @@ A professional portfolio website showcasing my projects, skills, and experience.
 
 ```
 ePortfolio/
-├── index.html          # Main HTML file
-├── assets/            
-│   ├── images/         # Image assets
-│   └── files/          # Additional files (e.g., resume)
-├── css/                # Custom CSS styles
-└── js/                 # Custom JavaScript
+│
+├── /docs
+│   ├── index.html              # Main HTML file (entry point of your site)
+│   ├── /CSS
+│   │   └── EPortfolio.css      # Your main CSS file
+│   ├── /JavaScript
+│   │   └── script.js           # Your JavaScript file
+│   ├── /images
+│   │  
+│   ├── /assets
+│       └── (other assets if any)
+│   
+│
+├── .gitignore                  
+└──  README.md                     
+
 ```
 
 ## Setup Instructions
