@@ -333,7 +333,13 @@ body {
 /* Responsive Styles */
 @media screen and (max-width: 1200px) {
   .container {
-    flex-direction: column; /* Stack sidebar and content vertically on medium screens */
+    flex-direction: row; /* Keep sidebar and content side by side */
+  }
+
+  main {
+    margin-left: 0;
+    width: 100%;
+    overflow-y: auto;
   }
 
   .sidebar {
@@ -343,6 +349,7 @@ body {
     top: 0;
     left: -100%; /* Initially hidden off-screen */
     padding: 20px; /* Reduce padding */
+    z-index: 1000;
   }
 
   .logo {
@@ -377,12 +384,30 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .container {
     flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  main {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: visible;
+    margin-top: 60px; /* Space for header */
   }
 
   .sidebar {
     padding: 10px;
+    height: 100vh;
+    overflow-y: auto;
   }
 
   .logo {
@@ -413,19 +438,15 @@ body {
   .burger-menu {
     display: block;
   }
+
+  .page {
+    min-height: 100vh;
+    height: auto;
+    padding: 20px 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-
-  body {
-    overflow: auto;
-  }
-
-  .container {
-    overflow: hidden;
-    scroll-snap-type: y mandatory;
-  }
-
   /* Title and Burger Menu - Top Bar */
   .logo {
     font-size: 1.2rem;
@@ -630,10 +651,6 @@ main {
 
 /* Tablet Devices (max-width: 1024px) */
 @media (max-width: 1024px) {
-  body {
-    overflow: auto;
-  }
-
   .hero-content {
     max-width: 70%;
     margin-left: 20px;
@@ -675,26 +692,6 @@ main {
 
 /* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
-  body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  .container {
-    flex-direction: column;
-    overflow-y: auto;
-    height: auto;
-    min-height: 100vh;
-  }
-
-  main {
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    overflow-y: visible;
-    margin-top: 60px; /* Space for header */
-  }
-
   .hero-content {
     max-width: 90%;
     margin-left: 0;
@@ -722,10 +719,8 @@ main {
   }
 
   .page {
-    min-height: 100vh;
-    height: auto;
     flex-direction: column;
-    padding: 20px 10px;
+    padding: 10px;
     justify-content: flex-start;
     margin-top: 80px; /* Added margin to avoid header overlap */
   }
@@ -1897,25 +1892,4 @@ main {
 .toast .cta-save:hover {
   background-color: orange;
   color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  html, body {
-    overflow: auto; /* Enable scrolling for smaller devices */
-  }
-
-  .container {
-    overflow-y: auto; /* Ensure scrolling on mobile */
-  }
-}
-
-/* For tablet devices */
-@media screen and (max-width: 1024px) {
-  html, body {
-    overflow: auto; /* Enable scrolling for smaller devices */
-  }
-
-  .container {
-    overflow-y: auto; /* Ensure scrolling on mobile */
-  }
 }
