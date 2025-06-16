@@ -245,7 +245,7 @@ const prevButton = document.querySelector('.slider--btn__prev');
 const nextButton = document.querySelector('.slider--btn__next');
 const slides = document.querySelectorAll('.slide');
 const slidesWrapper = document.querySelector('.slides');
-let currentIndex = 6; // Start with slide 7 (iPara - latest project)
+let currentIndex = 7; // Start with slide 8 (iPara - latest project)
 
 // Function to update the current slide position
 function updateSlidePosition() {
